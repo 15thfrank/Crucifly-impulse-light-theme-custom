@@ -1,0 +1,150 @@
+{%- if section.settings.toggle_head_font == true -%}
+  {% assign headfont = section.settings.header_font.family %}
+  {% assign fontfallback = section.settings.header_font.fallback_families %}
+  {% assign fontweight = section.settings.header_font.weight %}
+  {% assign fontsize = section.settings.head_font_size %}
+{%- else -%}
+  {% assign headfont = "Tiemann" %}
+  {% assign fontfallback = "serif" %}
+  {% assign fontweight = 400 %}
+  {% assign fontsize = "35" %}
+{%- endif -%}
+
+{%- if section.settings.toggle_primary_font == true -%}
+  {% assign primfont = section.settings.primary_font.family %}
+  {% assign pfontfallback = section.settings.primary_font.fallback_families %}
+  {% assign pfontsize = section.settings.prim_font_size %}
+  {% assign pfontweight = section.settings.primary_font.weight %}
+{%- else -%}
+  {% assign primfont = "Futura" %}
+  {% assign pfontfallback = "sans-serif" %}
+  {% assign pfontsize = "16"%}
+  {% assign pfontweight = 400 %}
+{%- endif -%}
+
+
+
+<style>
+  .js-modal-close {color:#fff !important;}
+
+  :root {
+    --typeHeaderPrimary: {{headfont}} !important;
+    --typeHeaderFallback: {{fontfallback}} !important;
+    --typeHeaderSize: {{fontsize}}px;
+    --typeHeaderWeight: {{fontweight}};
+    --typeHeaderLineHeight: 1;
+    --typeHeaderSpacing: 0.0em;
+    --typeBasePrimary:  {{primfont}} !important;
+    --typeBaseFallback: {{pfontfallback}} !important;
+    --typeBaseSize: {{pfontsize}}px;
+    --typeBaseWeight: {{pfontweight}};
+    --typeBaseSpacing: 0.025em;
+    --typeBaseLineHeight: 1.6;
+    --typeCollectionTitle: 18px;
+    --iconWeight: 2px;
+    --iconLinecaps: miter;
+    --buttonRadius: 0px;
+    --colorGridOverlayOpacity: 0.1;
+  }
+
+  :root {
+    --colorBtnPrimary: #cf2424 !important;
+    --colorBtnPrimaryLight: #df4747 !important;
+    --colorBtnPrimaryDim: #b92020 !important;
+    --colorBtnPrimaryText: #ffffff !important;
+    --colorCartDot: #b30000 !important;
+    --colorLink: #ffffff !important;
+    --colorTextBody: #ffffff !important;
+    --colorPrice: #d1ba98 !important;
+    --colorTextSavings: #b30000 !important;
+    --colorSaleTag: #990000 !important;
+    --colorSaleTagText: #ffffff !important;
+    --colorBody: #333333 !important;
+    --colorBodyDim: #262626 !important;
+    --colorFooter: #e5e5e5 !important;
+    --colorFooterText: #333333 !important;
+    --colorBorder: #2b2a27 !important;
+    --colorNav: #282828 !important;
+    --colorNavText: #ffffff !important;
+    --colorAnnouncement: #cf2424 !important;
+    --colorAnnouncementText: #ffffff !important;
+    --colorHeroText: #ffffff !important;
+    --colorModalBg: #67635d !important;
+    --colorImageOverlay: #000000 !important;
+    --colorImageOverlayOpacity: 0.15 !important;
+    --colorImageOverlayTextShadow: 0.3 !important;
+    --colorSmallImageBg: #000000 !important;
+    --colorLargeImageBg: #111111 !important;
+    --colorGridOverlay: #000000 !important;
+    --colorGridOverlayOpacity: 0.1 !important;
+    --colorDrawers: #000000 !important;
+    --colorDrawersDim: #000000 !important;
+    --colorDrawerBorder: #2b2a27 !important;
+    --colorDrawerText: #ffffff !important;
+    --colorDrawerTextDark: #d9d9d9 !important;
+    --colorDrawerButton: #9f8561 !important;
+    --colorDrawerButtonText: #ffffff !important;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Page manager",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Heading Font",
+      "info": "Used to change heading font typography"
+    },
+    {
+      "type": "checkbox",
+      "id": "toggle_head_font",
+      "label": "Use custom font?",
+      "default": false
+    },
+    {
+      "type": "font_picker",
+      "id": "header_font",
+      "label": "Font",
+      "default": "helvetica_n4"
+    },
+    {
+      "type": "range",
+      "id": "head_font_size",
+      "label": "Font Size",
+      "unit": "px",
+      "min": 12,
+      "max": 42,
+      "step": 1,
+      "default": 35
+    },
+    {
+      "type": "header",
+      "content": "Primary font",
+      "info": "Used to change primary font typography"
+    },
+    {
+      "type": "checkbox",
+      "id": "toggle_primary_font",
+      "label": "Use custom font?",
+      "default": false
+    },
+    {
+      "type": "font_picker",
+      "id": "primary_font",
+      "label": "Font",
+      "default": "helvetica_n4"
+    },
+    {
+      "type": "range",
+      "id": "prim_font_size",
+      "label": "Font Size",
+      "unit": "px",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "default": 16
+    }
+  ]
+}
+{% endschema %}

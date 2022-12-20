@@ -1,0 +1,58 @@
+:root {
+    --typeHeaderPrimary: "Fjalla One";
+    --typeHeaderFallback: sans-serif;
+    --typeHeaderSize: 35px;
+    --typeHeaderWeight: 400;
+    --typeHeaderLineHeight: 1.2;
+    --typeHeaderSpacing: 0.15em;
+    --typeBasePrimary: "ITC Conduit";
+    --typeBaseFallback: sans-serif;
+    --typeBaseSize: 18px;
+    --typeBaseWeight: 400;
+    --typeBaseSpacing: 0.05em;
+    --typeBaseLineHeight: 1.4;
+    --typeCollectionTitle: 23px;
+    --iconWeight: 5px;
+    --iconLinecaps: miter;
+    --buttonRadius: 0px;
+    --colorGridOverlayOpacity: 0.1;
+}
+
+:root {
+    --colorBtnPrimary: #cf2424 !important;
+    --colorBtnPrimaryLight: #df4747 !important;
+    --colorBtnPrimaryDim: #b92020 !important;
+    --colorBtnPrimaryText: #ffffff !important;
+    --colorCartDot: #b30000 !important;
+    --colorLink: #ffffff !important;
+    --colorTextBody: #ffffff !important;
+    --colorPrice: #d1ba98 !important;
+    --colorTextSavings: #b30000 !important;
+    --colorSaleTag: #990000 !important;
+    --colorSaleTagText: #ffffff !important;
+    --colorBody: #333333 !important;
+    --colorBodyDim: #262626 !important;
+    --colorFooter: #e5e5e5 !important;
+    --colorFooterText: #333333 !important;
+    --colorBorder: #2b2a27 !important;
+    --colorNav: #282828 !important;
+    --colorNavText: #ffffff !important;
+    --colorAnnouncement: #cf2424 !important;
+    --colorAnnouncementText: #ffffff !important;
+    --colorHeroText: #ffffff !important;
+    --colorModalBg: #67635d !important;
+    --colorImageOverlay: #000000 !important;
+    --colorImageOverlayOpacity: 0.15 !important;
+    --colorImageOverlayTextShadow: 0.3 !important;
+    --colorSmallImageBg: #000000 !important;
+    --colorLargeImageBg: #111111 !important;
+    --colorGridOverlay: #000000 !important;
+    --colorGridOverlayOpacity: 0.1 !important;
+    --colorDrawers: #000000 !important;
+    --colorDrawersDim: #000000 !important;
+    --colorDrawerBorder: #2b2a27 !important;
+    --colorDrawerText: #ffffff !important;
+    --colorDrawerTextDark: #d9d9d9 !important;
+    --colorDrawerButton: #9f8561 !important;
+    --colorDrawerButtonText: #ffffff !important;
+}
